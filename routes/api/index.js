@@ -1,3 +1,6 @@
 const router = require('express-promise-router')()
+const authRouter = require('./authRoutesAndTools')
 
-module.exports = [router.use('/')]
+const restrictedRouter = require('./restrictedRoutes')
+
+module.exports = [router.use(authRouter), router.use(restrictedRouter)]

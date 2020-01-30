@@ -1,4 +1,4 @@
-const { PORT } = require('./env')
+const { PORT, SESSION_SECRET, SECURE_COOKIE } = require('./env')
 const app = require('express')()
 const json = require('express').json()
 const morgan = require('morgan')('dev')
